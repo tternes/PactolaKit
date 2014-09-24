@@ -8,11 +8,16 @@
 
 #import "BTPactolaNotificationRequest.h"
 
-#if __has_feature(objc_arc)
-#error This file must be compiled with -fno-objc-arc
-#endif
-
 @implementation BTPactolaNotificationRequest
+
+- (void)dealloc
+{
+    self.deviceIdentifier = nil;
+    self.title = nil;
+    self.message = nil;
+    self.url = nil;
+    self.badgeCount = nil;
+}
 
 - (NSString *)requestMethod
 {

@@ -79,7 +79,7 @@
 
 - (void)failedWithError:(NSError *)error;
 
-@property (nonatomic, assign) id<BTPactolaRequestDelegate> delegate;
+@property (nonatomic, weak) id<BTPactolaRequestDelegate> delegate;
 
 @end
 

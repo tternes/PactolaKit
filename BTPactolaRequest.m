@@ -8,10 +8,6 @@
 
 #import "BTPactolaRequest.h"
 
-#if __has_feature(objc_arc)
-#error This file must be compiled with -fno-objc-arc
-#endif
-
 @interface BTPactolaRequest ()
 @property (nonatomic, strong) NSURLConnection *connection;
 @property (nonatomic, assign) NSUInteger statusCode;
@@ -24,7 +20,6 @@
 {
     self.connection = nil;
     self.collectedData = nil;
-    [super dealloc];
 }
 
 #pragma mark - Public
@@ -100,8 +95,6 @@
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
 {
-    NSLog(@"%s: %@", __PRETTY_FUNCTION__, error);
-    
     [self failedWithError:error];
 
     assert(self.connection == connection);
@@ -111,15 +104,12 @@
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
 {
     NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)response;
-//    NSLog(@"%s (%li)", __PRETTY_FUNCTION__, (long)httpResponse.statusCode);
     self.statusCode = httpResponse.statusCode;
     self.collectedData = [NSMutableData data];
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
 {
-//    NSLog(@"%s (%li bytes)", __PRETTY_FUNCTION__, (unsigned long)data.length);
-    
     // Prevent overflow
     if((self.collectedData.length + data.length) > [[self maxResponseSize] integerValue])
     {
@@ -133,7 +123,6 @@
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
-//    NSLog(@"%s", __PRETTY_FUNCTION__);
     assert(self.connection == connection);
     self.connection = nil;
     

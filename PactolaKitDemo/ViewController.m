@@ -31,7 +31,7 @@
 
 - (IBAction)buttonPressed:(id)sender
 {
-    self.request = [[[BTPactolaNotificationRequest alloc] init] autorelease];
+    self.request = [[BTPactolaNotificationRequest alloc] init];
     self.request.delegate = self;
     self.request.deviceIdentifier = self.deviceIdentifierField.text;
     self.request.title = self.titleField.text;

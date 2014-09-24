@@ -10,12 +10,12 @@
 
 @interface BTPactolaNotificationRequest : BTPactolaRequest
 
-@property (nonatomic, retain) NSString *deviceIdentifier;
+@property (nonatomic, strong) NSString *deviceIdentifier;
 
-@property (nonatomic, retain) NSString *title;
-@property (nonatomic, retain) NSString *message;
-@property (nonatomic, retain) NSString *url;
+@property (nonatomic, strong) NSString *title;
+@property (nonatomic, strong) NSString *message;
+@property (nonatomic, strong) NSString *url;
 
-@property (nonatomic, retain) NSNumber *badgeCount;
+@property (nonatomic, strong) NSNumber *badgeCount;
 
 @end

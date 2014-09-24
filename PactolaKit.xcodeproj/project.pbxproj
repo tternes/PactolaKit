@@ -11,12 +11,10 @@
 		DFD57DC219D27BCD00BCEFE9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFD57DB819D27BCD00BCEFE9 /* LaunchScreen.xib */; };
 		DFD57DC319D27BCD00BCEFE9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFD57DBA19D27BCD00BCEFE9 /* Main.storyboard */; };
 		DFD57DC419D27BCD00BCEFE9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFD57DBC19D27BCD00BCEFE9 /* Images.xcassets */; };
-		DFD57DC519D27BCD00BCEFE9 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DFD57DBD19D27BCD00BCEFE9 /* Info.plist */; };
 		DFD57DC619D27BCD00BCEFE9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DFD57DBE19D27BCD00BCEFE9 /* main.m */; };
 		DFD57DC719D27BCD00BCEFE9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFD57DC019D27BCD00BCEFE9 /* ViewController.m */; };
 		DFD57DCB19D27CC800BCEFE9 /* BTPactolaRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = DFD57DCA19D27CC800BCEFE9 /* BTPactolaRequest.m */; };
 		DFD57DCE19D27CFC00BCEFE9 /* BTPactolaNotificationRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = DFD57DCD19D27CFC00BCEFE9 /* BTPactolaNotificationRequest.m */; };
-		DFD57DD119D27D4100BCEFE9 /* BTPactolaResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = DFD57DD019D27D4100BCEFE9 /* BTPactolaResponse.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,8 +32,6 @@
 		DFD57DCA19D27CC800BCEFE9 /* BTPactolaRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTPactolaRequest.m; sourceTree = "<group>"; };
 		DFD57DCC19D27CFC00BCEFE9 /* BTPactolaNotificationRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTPactolaNotificationRequest.h; sourceTree = "<group>"; };
 		DFD57DCD19D27CFC00BCEFE9 /* BTPactolaNotificationRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTPactolaNotificationRequest.m; sourceTree = "<group>"; };
-		DFD57DCF19D27D4000BCEFE9 /* BTPactolaResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTPactolaResponse.h; sourceTree = "<group>"; };
-		DFD57DD019D27D4100BCEFE9 /* BTPactolaResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTPactolaResponse.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,8 +92,6 @@
 			children = (
 				DFD57DC919D27CC800BCEFE9 /* BTPactolaRequest.h */,
 				DFD57DCA19D27CC800BCEFE9 /* BTPactolaRequest.m */,
-				DFD57DCF19D27D4000BCEFE9 /* BTPactolaResponse.h */,
-				DFD57DD019D27D4100BCEFE9 /* BTPactolaResponse.m */,
 				DFD57DCC19D27CFC00BCEFE9 /* BTPactolaNotificationRequest.h */,
 				DFD57DCD19D27CFC00BCEFE9 /* BTPactolaNotificationRequest.m */,
 			);
@@ -161,7 +155,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DFD57DC519D27BCD00BCEFE9 /* Info.plist in Resources */,
 				DFD57DC419D27BCD00BCEFE9 /* Images.xcassets in Resources */,
 				DFD57DC219D27BCD00BCEFE9 /* LaunchScreen.xib in Resources */,
 				DFD57DC319D27BCD00BCEFE9 /* Main.storyboard in Resources */,
@@ -178,7 +171,6 @@
 				DFD57DCB19D27CC800BCEFE9 /* BTPactolaRequest.m in Sources */,
 				DFD57DC119D27BCD00BCEFE9 /* AppDelegate.m in Sources */,
 				DFD57DC619D27BCD00BCEFE9 /* main.m in Sources */,
-				DFD57DD119D27D4100BCEFE9 /* BTPactolaResponse.m in Sources */,
 				DFD57DCE19D27CFC00BCEFE9 /* BTPactolaNotificationRequest.m in Sources */,
 				DFD57DC719D27BCD00BCEFE9 /* ViewController.m in Sources */,
 			);
@@ -288,7 +280,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_OBJC_ARC = NO;
 				INFOPLIST_FILE = PactolaKitDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -299,7 +290,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_OBJC_ARC = NO;
 				INFOPLIST_FILE = PactolaKitDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
