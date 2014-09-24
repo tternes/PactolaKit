@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A361c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fuk-ej-dQm">
+                                <rect key="frame" x="220" y="256" width="160" height="87"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="5oX-mk-LUQ"/>
+                                    <constraint firstAttribute="height" constant="87" id="rSj-cA-ETP"/>
+                                </constraints>
+                                <state key="normal" title="Send Request">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="t1T-gt-7qy"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qPX-2l-Kgo">
+                                <rect key="frame" x="16" y="351" width="568" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Message" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qdF-X8-6ef">
+                                <rect key="frame" x="16" y="389" width="568" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Device Identifier" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F52-a5-xBp">
+                                <rect key="frame" x="16" y="218" width="568" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="jBa-dU-vL7">
+                                <rect key="frame" x="14" y="435" width="522" height="31"/>
+                                <connections>
+                                    <action selector="sliderChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="6yg-qD-QyZ"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5PI-ef-f1I">
+                                <rect key="frame" x="542" y="439" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="42" id="iQt-M6-oWW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qPX-2l-Kgo" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="34Q-kT-cak"/>
+                            <constraint firstItem="qdF-X8-6ef" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="3VO-Of-jtt"/>
+                            <constraint firstItem="5PI-ef-f1I" firstAttribute="leading" secondItem="jBa-dU-vL7" secondAttribute="trailing" constant="8" id="6Ac-Xs-MhZ"/>
+                            <constraint firstItem="qPX-2l-Kgo" firstAttribute="top" secondItem="Fuk-ej-dQm" secondAttribute="bottom" constant="8" id="DGd-iU-AGR"/>
+                            <constraint firstItem="F52-a5-xBp" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="DkM-Hb-Txo"/>
+                            <constraint firstItem="5PI-ef-f1I" firstAttribute="top" secondItem="qdF-X8-6ef" secondAttribute="bottom" constant="20" id="N29-Bi-PDx"/>
+                            <constraint firstItem="jBa-dU-vL7" firstAttribute="top" secondItem="qdF-X8-6ef" secondAttribute="bottom" constant="16" id="Q0B-vm-FZE"/>
+                            <constraint firstItem="jBa-dU-vL7" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="Vto-1y-dy7"/>
+                            <constraint firstAttribute="centerX" secondItem="qPX-2l-Kgo" secondAttribute="centerX" id="a8O-lE-4WU"/>
+                            <constraint firstItem="F52-a5-xBp" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="dzC-FQ-5BP"/>
+                            <constraint firstItem="qPX-2l-Kgo" firstAttribute="top" secondItem="Fuk-ej-dQm" secondAttribute="bottom" constant="8" id="gvV-QS-hjR"/>
+                            <constraint firstItem="qdF-X8-6ef" firstAttribute="top" secondItem="qPX-2l-Kgo" secondAttribute="bottom" constant="8" id="hG5-pW-WVG"/>
+                            <constraint firstAttribute="centerX" secondItem="Fuk-ej-dQm" secondAttribute="centerX" id="iha-GZ-RHS"/>
+                            <constraint firstAttribute="centerY" secondItem="Fuk-ej-dQm" secondAttribute="centerY" id="jaP-cf-zzo"/>
+                            <constraint firstItem="Fuk-ej-dQm" firstAttribute="top" secondItem="F52-a5-xBp" secondAttribute="bottom" constant="8" id="mJg-cS-bHB"/>
+                            <constraint firstItem="5PI-ef-f1I" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="pcB-IM-Zd0"/>
+                            <constraint firstItem="qPX-2l-Kgo" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="rpF-ck-SiN"/>
+                            <constraint firstItem="qdF-X8-6ef" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="wyc-5d-3Ga"/>
+                            <constraint firstAttribute="centerX" secondItem="qdF-X8-6ef" secondAttribute="centerX" id="ygs-86-ibg"/>
+                            <constraint firstItem="qdF-X8-6ef" firstAttribute="top" secondItem="qPX-2l-Kgo" secondAttribute="bottom" constant="8" id="ymC-tN-dVn"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="a8O-lE-4WU"/>
+                                <exclude reference="gvV-QS-hjR"/>
+                                <exclude reference="ygs-86-ibg"/>
+                                <exclude reference="ymC-tN-dVn"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="badgeCountLabel" destination="5PI-ef-f1I" id="OL8-Jg-ggg"/>
+                        <outlet property="badgeCountSlider" destination="jBa-dU-vL7" id="Voa-fs-i6X"/>
+                        <outlet property="deviceIdentifierField" destination="F52-a5-xBp" id="sDm-0L-CJd"/>
+                        <outlet property="messageField" destination="qdF-X8-6ef" id="8fc-rv-28Q"/>
+                        <outlet property="titleField" destination="qPX-2l-Kgo" id="DRp-XT-hIW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
