@@ -26,7 +26,7 @@
 
 - (NSString *)requestEndpoint
 {
-    return [NSString stringWithFormat:@"/notification/%@", self.deviceIdentifier];
+    return [NSString stringWithFormat:@"/%@/notification", self.deviceIdentifier];
 }
 
 - (NSData *)requestPayload
