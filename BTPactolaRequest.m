@@ -42,9 +42,10 @@
         [request addValue:headers[key] forHTTPHeaderField:key];
     }
 
-    
-    self.connection = [NSURLConnection connectionWithRequest:request delegate:self];
-    [self.connection start];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        self.connection = [NSURLConnection connectionWithRequest:request delegate:self];
+        [self.connection start];
+    });
 }
 
 - (NSString *)serverHost;
